@@ -14,6 +14,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'curriculum',
+    loadChildren: () => import('./curriculum/curriculum.module').then( m => m.CurriculumPageModule)
+  },
+  {
+    path: 'ibiblioteca',
+    loadChildren: () => import('./ibiblioteca/ibiblioteca.module').then( m => m.IbibliotecaPageModule)
   }
 ];
 
